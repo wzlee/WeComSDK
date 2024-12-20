@@ -174,7 +174,7 @@ public class MessageSendRequest extends AbstractWeComRequest<MessageSendRequest.
                     this.setVoice(voice);
                     return this;
                 }else{
-                    throw new RuntimeException("消息格式[Image]不匹配");
+                    throw new RuntimeException("消息格式[Voice]不匹配");
                 }
             case VIDEO:
                 if(message instanceof Video){
@@ -182,7 +182,7 @@ public class MessageSendRequest extends AbstractWeComRequest<MessageSendRequest.
                     this.setVideo(video);
                     return this;
                 }else{
-                    throw new RuntimeException("消息格式[Image]不匹配");
+                    throw new RuntimeException("消息格式[Video]不匹配");
                 }
             default:
                 throw new RuntimeException("不支持消息格式["+ msgType +"]");
